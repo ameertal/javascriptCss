@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #spn{color:blue;background-color:cyan;position:relative;}
+    </style>
+</head>
+<body>
+    <marquee>surprise</marquee>
+    <input  type="button" value="button" onclick="a()"/><br />
+    <span id="spn">hello</span>
+
+    <script>
+        function a() {
+            document.getElementById("spn").style.color = "green";
+            document.getElementById("spn").style.backgroundColor = "silver";
+            let s = document.getElementById("spn").style;
+            s.fontSize = "40px";
+            s.left = "200px";
+            s.top = "300px";
+        }
+    </script>
+
+</body>
+</html>

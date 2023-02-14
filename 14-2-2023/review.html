@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="c()">
+    <input tabindex="1" type="text" placeholder="tz..." onblur="a(this)" id="txtTz" /><br />
+    <input type="text" tabindex="3" value="abcd" onfocus="b('spaguetti')" onclick="c()" /><br />
+    <input tabindex="2" type="button" value="send" onclick="d()" /><br />
+    <img src="a.png" alt="Alternate Text" id="pic1" />
+
+    <!--<script src="a.js"></script>-->
+    <script>
+        "use strict"
+        let t;
+        //y = 5;
+        //let x = 3;
+        let i = 0;
+        function d() {
+            clearTimeout(t);
+        }
+        let show = true;
+        function c() {
+            let p1 = document.getElementById("pic1");
+            if (show == true) {
+                p1.src = "b.png";
+            }
+            else {
+                p1.src="a.png"
+            }
+            show = !show;
+
+            //document.getElementById("txtTz").focus();
+            document.getElementById("txtTz").value = ++i;
+            t = setTimeout("c()", 1000);
+        }
+        function a(ttt) {
+            //alert("click");
+            //alert(document.getElementById("txtTz").value);
+            //alert("second: " + ttt.value);
+            if (ttt.value.length < 4) {
+                ttt.value = "";
+            }
+        }
+        function b(x) {
+            // alert(x);
+        }
+
+    </script>
+</body>
+</html>
